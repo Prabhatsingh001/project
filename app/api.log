@@ -1,0 +1,237 @@
+[2025-06-08 17:28:36,460] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-08 17:28:39,829] WARNING django.request Not Found: /
+[2025-06-08 17:28:39,829] WARNING django.server "GET / HTTP/1.1" 404 2306
+[2025-06-08 17:28:46,772] INFO django.server "GET /admin/Auth/customerprofile/ HTTP/1.1" 200 11097
+[2025-06-08 17:28:46,851] INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-06-08 17:29:10,800] INFO django.server "POST /api/auth/login/ HTTP/1.1" 200 739
+[2025-06-08 17:32:53,776] ERROR django.request Internal Server Error: /api/auth/my/
+Traceback (most recent call last):
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\rest_framework\generics.py", line 203, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\HP\OneDrive\Desktop\project\app\Auth\views.py", line 91, in get_queryset
+    return Booking.objects.filter(customer=user)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\django\db\models\query.py", line 1491, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\django\db\models\query.py", line 1509, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\django\db\models\query.py", line 1516, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\django\db\models\sql\query.py", line 1643, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\django\db\models\sql\query.py", line 1675, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\django\db\models\sql\query.py", line 1560, in build_filter
+    self.check_related_objects(join_info.final_field, value, join_info.opts)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\django\db\models\sql\query.py", line 1369, in check_related_objects
+    self.check_query_object_type(value, opts, field)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\django\db\models\sql\query.py", line 1346, in check_query_object_type
+    raise ValueError(
+ValueError: Cannot query "raghavsingh001@gmail.com": Must be "CustomerProfile" instance.
+[2025-06-08 17:32:53,791] ERROR django.server "GET /api/auth/my/ HTTP/1.1" 500 147465
+[2025-06-08 17:33:23,786] INFO django.server "GET /admin/Auth/customerprofile/ HTTP/1.1" 200 11097
+[2025-06-08 17:33:23,827] INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-06-08 17:33:25,514] INFO django.server "GET /admin/Auth/providerprofile/ HTTP/1.1" 200 11095
+[2025-06-08 17:33:25,549] INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-06-08 17:33:27,402] INFO django.server "GET /admin/Auth/customerprofile/ HTTP/1.1" 200 11097
+[2025-06-08 17:33:27,438] INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-06-08 17:39:26,238] INFO django.utils.autoreload C:\Users\HP\OneDrive\Desktop\project\app\Auth\views.py changed, reloading.
+[2025-06-08 17:39:27,152] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-08 17:39:58,404] INFO django.utils.autoreload C:\Users\HP\OneDrive\Desktop\project\app\Auth\views.py changed, reloading.
+[2025-06-08 17:39:59,000] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-08 17:47:43,192] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-08 17:47:49,876] WARNING django.request Unauthorized: /api/auth/my/
+[2025-06-08 17:47:49,878] WARNING django.server "GET /api/auth/my/ HTTP/1.1" 401 172
+[2025-06-08 17:48:00,354] INFO django.server "POST /api/auth/login/ HTTP/1.1" 200 739
+[2025-06-08 17:48:40,432] INFO django.server "GET /api/auth/my/ HTTP/1.1" 200 162
+[2025-06-08 17:53:04,203] INFO django.utils.autoreload C:\Users\HP\OneDrive\Desktop\project\app\Auth\serializers.py changed, reloading.
+[2025-06-08 17:53:05,089] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-08 17:53:36,292] INFO django.utils.autoreload C:\Users\HP\OneDrive\Desktop\project\app\Auth\serializers.py changed, reloading.
+[2025-06-08 17:53:37,321] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-08 17:54:13,190] INFO django.utils.autoreload C:\Users\HP\OneDrive\Desktop\project\app\Auth\views.py changed, reloading.
+[2025-06-08 17:54:13,910] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-08 17:55:49,806] INFO django.utils.autoreload C:\Users\HP\OneDrive\Desktop\project\app\Auth\views.py changed, reloading.
+[2025-06-08 17:55:50,644] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-08 17:58:17,063] INFO django.utils.autoreload C:\Users\HP\OneDrive\Desktop\project\app\Auth\urls.py changed, reloading.
+[2025-06-08 17:58:17,915] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-08 17:59:09,496] INFO django.utils.autoreload C:\Users\HP\OneDrive\Desktop\project\app\Auth\views.py changed, reloading.
+[2025-06-08 17:59:10,406] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-08 17:59:28,037] INFO django.server "POST /api/auth/login/ HTTP/1.1" 200 739
+[2025-06-08 18:00:03,501] INFO django.server "GET /api/auth/list_services/ HTTP/1.1" 200 695
+[2025-06-08 18:07:08,306] WARNING django.request Unauthorized: /api/auth/book_service/
+[2025-06-08 18:07:08,308] WARNING django.server "POST /api/auth/book_service/ HTTP/1.1" 401 172
+[2025-06-08 18:07:14,945] INFO django.server "POST /api/auth/login/ HTTP/1.1" 200 739
+[2025-06-08 18:07:48,126] WARNING django.request Unauthorized: /api/auth/book_service/
+[2025-06-08 18:07:48,131] WARNING django.server "POST /api/auth/book_service/ HTTP/1.1" 401 172
+[2025-06-08 18:08:30,205] WARNING django.request Unauthorized: /api/auth/book_service/
+[2025-06-08 18:08:30,205] WARNING django.server "POST /api/auth/book_service/ HTTP/1.1" 401 172
+[2025-06-08 18:08:39,637] INFO django.server "POST /api/auth/login/ HTTP/1.1" 200 739
+[2025-06-08 18:09:11,280] WARNING django.request Bad Request: /api/auth/book_service/
+[2025-06-08 18:09:11,280] WARNING django.server "POST /api/auth/book_service/ HTTP/1.1" 400 51
+[2025-06-08 18:09:37,175] ERROR django.request Internal Server Error: /api/auth/book_service/
+Traceback (most recent call last):
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\rest_framework\generics.py", line 194, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\HP\OneDrive\Desktop\project\app\Auth\views.py", line 88, in perform_create
+    serializer.save(customer=self.request.user)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\rest_framework\serializers.py", line 210, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\rest_framework\serializers.py", line 991, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\django\db\models\query.py", line 661, in create
+    obj = self.model(**kwargs)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\django\db\models\base.py", line 545, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 288, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<CustomUser: raghavsingh001@gmail.com>": "Booking.customer" must be a "CustomerProfile" instance.
+[2025-06-08 18:09:37,184] ERROR django.server "POST /api/auth/book_service/ HTTP/1.1" 500 137050
+[2025-06-08 18:17:28,768] INFO django.utils.autoreload C:\Users\HP\OneDrive\Desktop\project\app\Auth\views.py changed, reloading.
+[2025-06-08 18:17:29,835] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-08 18:17:36,471] INFO django.server "POST /api/auth/login/ HTTP/1.1" 200 739
+[2025-06-08 18:20:01,090] INFO django.utils.autoreload C:\Users\HP\OneDrive\Desktop\project\app\Auth\views.py changed, reloading.
+[2025-06-08 18:20:01,785] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-08 18:21:03,785] INFO django.utils.autoreload C:\Users\HP\OneDrive\Desktop\project\app\Auth\views.py changed, reloading.
+[2025-06-08 18:21:04,624] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-08 18:21:14,245] INFO django.server "POST /api/auth/login/ HTTP/1.1" 200 739
+[2025-06-08 18:21:38,407] INFO django.server "POST /api/auth/book_service/ HTTP/1.1" 201 160
+[2025-06-08 18:25:34,819] INFO django.server "POST /api/auth/login/ HTTP/1.1" 200 738
+[2025-06-08 18:27:08,060] INFO django.utils.autoreload C:\Users\HP\OneDrive\Desktop\project\app\Auth\models.py changed, reloading.
+[2025-06-08 18:27:09,063] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-08 18:27:28,055] WARNING django.request Unauthorized: /api/auth/book_service/
+[2025-06-08 18:27:28,055] WARNING django.server "PATCH /api/auth/book_service/ HTTP/1.1" 401 172
+[2025-06-08 18:27:51,924] INFO django.server "POST /api/auth/login/ HTTP/1.1" 200 738
+[2025-06-08 18:28:14,652] WARNING django.request Unauthorized: /api/auth/book_service/
+[2025-06-08 18:28:14,652] WARNING django.server "PATCH /api/auth/book_service/ HTTP/1.1" 401 172
+[2025-06-08 18:28:24,959] WARNING django.request Method Not Allowed: /api/auth/book_service/
+[2025-06-08 18:28:24,967] WARNING django.server "PATCH /api/auth/book_service/ HTTP/1.1" 405 42
+[2025-06-08 18:28:31,102] WARNING django.request Method Not Allowed: /api/auth/book_service/
+[2025-06-08 18:28:31,102] WARNING django.server "PUT /api/auth/book_service/ HTTP/1.1" 405 40
+[2025-06-08 18:31:15,332] INFO django.utils.autoreload C:\Users\HP\OneDrive\Desktop\project\app\Auth\views.py changed, reloading.
+[2025-06-08 18:31:16,100] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-08 18:32:48,257] INFO django.server "POST /api/auth/login/ HTTP/1.1" 200 739
+[2025-06-08 18:33:21,467] INFO django.server "GET /api/auth/my/ HTTP/1.1" 200 323
+[2025-06-08 18:33:40,839] INFO django.utils.autoreload C:\Users\HP\OneDrive\Desktop\project\app\Auth\views.py changed, reloading.
+[2025-06-08 18:33:41,870] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-08 18:33:58,027] INFO django.server "POST /api/auth/login/ HTTP/1.1" 200 738
+[2025-06-08 18:35:05,233] ERROR django.request Internal Server Error: /api/auth/b7fe19d7-b7b3-40da-9ed6-8ab91ca7931b
+Traceback (most recent call last):
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+  File "C:\Users\HP\OneDrive\Desktop\project\.venv\lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to 127.0.0.1:8000/api/auth/b7fe19d7-b7b3-40da-9ed6-8ab91ca7931b/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+[2025-06-08 18:35:05,240] ERROR django.server "PUT /api/auth/b7fe19d7-b7b3-40da-9ed6-8ab91ca7931b HTTP/1.1" 500 73763
+[2025-06-08 18:35:19,972] WARNING django.request Method Not Allowed: /api/auth/b7fe19d7-b7b3-40da-9ed6-8ab91ca7931b/
+[2025-06-08 18:35:19,972] WARNING django.server "PUT /api/auth/b7fe19d7-b7b3-40da-9ed6-8ab91ca7931b/ HTTP/1.1" 405 40
+[2025-06-08 18:35:25,833] WARNING django.request Bad Request: /api/auth/b7fe19d7-b7b3-40da-9ed6-8ab91ca7931b/
+[2025-06-08 18:35:25,833] WARNING django.server "PATCH /api/auth/b7fe19d7-b7b3-40da-9ed6-8ab91ca7931b/ HTTP/1.1" 400 26
+[2025-06-08 18:35:47,864] INFO django.server "PATCH /api/auth/b7fe19d7-b7b3-40da-9ed6-8ab91ca7931b/ HTTP/1.1" 200 162
+[2025-06-08 19:30:58,321] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-08 19:30:59,879] WARNING django.request Not Found: /__reload__/events/
+[2025-06-08 19:30:59,880] WARNING django.server "GET /__reload__/events/ HTTP/1.1" 404 2542
+[2025-06-08 19:31:02,920] WARNING django.request Not Found: /__reload__/events/
+[2025-06-08 19:31:02,927] WARNING django.server "GET /__reload__/events/ HTTP/1.1" 404 2542
+[2025-06-08 19:31:05,956] WARNING django.request Not Found: /__reload__/events/
+[2025-06-08 19:31:05,958] WARNING django.server "GET /__reload__/events/ HTTP/1.1" 404 2542
+[2025-06-08 19:31:09,003] WARNING django.request Not Found: /__reload__/events/
+[2025-06-08 19:31:09,005] WARNING django.server "GET /__reload__/events/ HTTP/1.1" 404 2542
+[2025-06-08 19:31:12,022] WARNING django.request Not Found: /__reload__/events/
+[2025-06-08 19:31:12,022] WARNING django.server "GET /__reload__/events/ HTTP/1.1" 404 2542
+[2025-06-08 19:31:15,064] WARNING django.request Not Found: /__reload__/events/
+[2025-06-08 19:31:15,103] WARNING django.server "GET /__reload__/events/ HTTP/1.1" 404 2542
+[2025-06-08 19:31:18,132] WARNING django.request Not Found: /__reload__/events/
+[2025-06-08 19:31:18,132] WARNING django.server "GET /__reload__/events/ HTTP/1.1" 404 2542
+[2025-06-08 19:31:21,158] WARNING django.request Not Found: /__reload__/events/
+[2025-06-08 19:31:21,158] WARNING django.server "GET /__reload__/events/ HTTP/1.1" 404 2542
+[2025-06-08 19:31:24,184] WARNING django.request Not Found: /__reload__/events/
+[2025-06-08 19:31:24,184] WARNING django.server "GET /__reload__/events/ HTTP/1.1" 404 2542
+[2025-06-08 19:31:27,211] WARNING django.request Not Found: /__reload__/events/
+[2025-06-08 19:31:27,211] WARNING django.server "GET /__reload__/events/ HTTP/1.1" 404 2542
+[2025-06-08 19:31:30,244] WARNING django.request Not Found: /__reload__/events/
+[2025-06-08 19:31:30,244] WARNING django.server "GET /__reload__/events/ HTTP/1.1" 404 2542
+[2025-06-08 19:31:33,065] INFO django.utils.autoreload C:\Users\HP\OneDrive\Desktop\project\app\api\urls.py changed, reloading.
+[2025-06-08 19:31:33,902] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-08 19:31:34,301] WARNING django.request Not Found: /__reload__/events/
+[2025-06-08 19:31:34,303] WARNING django.server "GET /__reload__/events/ HTTP/1.1" 404 2542
+[2025-06-08 19:31:37,337] WARNING django.request Not Found: /__reload__/events/
+[2025-06-08 19:31:37,338] WARNING django.server "GET /__reload__/events/ HTTP/1.1" 404 2542
+[2025-06-08 19:31:40,410] WARNING django.request Not Found: /__reload__/events/
+[2025-06-08 19:31:40,412] WARNING django.server "GET /__reload__/events/ HTTP/1.1" 404 2542
+[2025-06-08 19:31:43,431] WARNING django.request Not Found: /__reload__/events/
+[2025-06-08 19:31:43,436] WARNING django.server "GET /__reload__/events/ HTTP/1.1" 404 2542
+[2025-06-08 19:31:46,470] WARNING django.request Not Found: /__reload__/events/
+[2025-06-08 19:31:46,470] WARNING django.server "GET /__reload__/events/ HTTP/1.1" 404 2542
+[2025-06-08 19:32:00,563] WARNING django.request Not Found: /
+[2025-06-08 19:32:00,563] WARNING django.server "GET / HTTP/1.1" 404 2470
+[2025-06-08 19:32:26,508] INFO django.server "GET /admin/ HTTP/1.1" 302 0
+[2025-06-08 19:32:26,580] INFO django.server "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4178
+[2025-06-08 19:32:42,735] INFO django.server "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[2025-06-08 19:32:44,722] INFO django.server "GET /admin/ HTTP/1.1" 200 12444
+[2025-06-08 19:32:44,772] INFO django.server "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[2025-06-08 19:32:44,898] INFO django.server "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[2025-06-08 19:32:44,899] INFO django.server "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[2025-06-08 19:32:44,901] INFO django.server "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+[2025-06-08 19:34:13,616] WARNING django.request Method Not Allowed: /api/payment/create/
+[2025-06-08 19:34:13,618] WARNING django.server "GET /api/payment/create/ HTTP/1.1" 405 40
+[2025-06-08 19:34:21,456] INFO django.server "POST /api/payment/create/ HTTP/1.1" 200 108
+[2025-06-08 19:36:24,166] WARNING django.request Method Not Allowed: /api/payment/verify/
+[2025-06-08 19:36:24,167] WARNING django.server "GET /api/payment/verify/ HTTP/1.1" 405 5614
+[2025-06-08 19:36:24,491] INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[2025-06-08 19:36:24,495] INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+[2025-06-08 19:36:24,500] INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+[2025-06-08 19:36:24,521] INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[2025-06-08 19:36:24,548] INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+[2025-06-08 19:36:24,577] INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+[2025-06-08 19:36:24,582] INFO django.server "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+[2025-06-08 19:36:24,598] INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[2025-06-08 19:36:24,598] INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[2025-06-08 19:36:24,613] INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[2025-06-08 19:36:24,615] INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+[2025-06-08 19:36:24,619] INFO django.server "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+[2025-06-08 19:36:24,727] WARNING django.request Not Found: /favicon.ico
+[2025-06-08 19:36:24,727] WARNING django.server "GET /favicon.ico HTTP/1.1" 404 2521
+[2025-06-08 19:43:37,945] INFO django.server "OPTIONS /api/payment/verify/ HTTP/1.1" 200 173

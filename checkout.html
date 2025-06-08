@@ -1,0 +1,27 @@
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<button onclick="payNow()">Pay ₹500</button>
+
+<script>
+function payNow() {
+    const options = {
+        key: "rzp_test_05Y2rfqUlR6VIH", // From backend
+        amount: 50000,                 // In paise = ₹500
+        currency: "INR",
+        order_id: "order_QejCvs3C5VREnL", // From backend response
+        handler: function (response) {
+            // This will contain payment_id, order_id, signature
+            console.log("Payment Success", response);
+
+            fetch("http://localhost:8000/api/payment/verify/", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(response)
+            })
+            .then(res => res.json())
+            .then(data => alert(JSON.stringify(data)));
+        }
+    };
+    const rzp = new Razorpay(options);
+    rzp.open();
+}
+</script>
